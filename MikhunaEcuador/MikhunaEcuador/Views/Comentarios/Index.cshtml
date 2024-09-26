@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MikhunaEcuador.Models.Comentario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Receta.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.NickName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contenido)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Receta.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.NickName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contenido)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ComentarioID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ComentarioID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ComentarioID })
+        </td>
+    </tr>
+}
+
+</table>

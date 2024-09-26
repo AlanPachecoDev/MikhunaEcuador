@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MikhunaMovilXF.App">
+
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+        negro
+        rojo de M  (Mikhuna): #ff0800
+        txtMikhuna: #ff7500
+        Fondo: radial-gradient(#EDF2C4, #F2E0BD, #F5B15C)
+        verMas: #0000ff
+        eliminar: #ff0000
+        agregarReceta blancos: #e3eff1
+    
+        botones: 
+        box-shadow: 0px 0px 5px #f5b15c;
+        background-color: #f1a224;
+        font-family: 'Global User Interface';
+    
+        Hover botón: #f66302
+    
+        TextColor="#A54E05"
+    
+    
+    
+    -->
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">black</Color>
+            <!--Setea el color primario-->
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#fff" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#fff" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

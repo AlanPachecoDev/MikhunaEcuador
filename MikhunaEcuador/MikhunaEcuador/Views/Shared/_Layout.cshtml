@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mikhuna Ecuador</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        
+</head>
+
+<body>
+    
+    <div class="hbar">
+
+        <img id="img-banLayout" src="~/Images/bannerComidaRe.png" />
+
+        <div class="centrarHeader">
+            <img id="logo" src="~/Images/logoFinal.png" />
+            <div class="navBar">
+                @Html.ActionLink("M", "Index", "Home", new { area = "4" }, new { @class = "txtMikhuna m" })
+                @Html.ActionLink("ikhuna", "Index", "Home", new { area = "4" }, new { @class = "txtMikhuna n", padding = 5 })
+                @Html.ActionLink("Agregar Receta", "Create", "Recetas", new { area = "4" }, new { @class = "txtMikhuna n" })
+                @Html.ActionLink("Perfil", "Perfil", "Usuarios", new { area = "4" }, new { @class = "txtMikhuna n" })
+                @Html.ActionLink("Login", "Login", "Usuarios", new { area = "4" }, new { @class = "txtMikhuna n" })
+            </div>
+
+
+            <!--Usuario que inició Sesión-->
+            <div class="iniciologin"
+            <div class="sesion">
+            <div class="iniciosesion">
+            @{
+                if (User.Identity.IsAuthenticated)
+                {
+                    <FONT color="	#000000">
+
+                    <b><a>@Html.Action("GetUsu", "Usuarios") </a> </b>
+                    <b>  <a href="/Usuarios/Logout"> |Cerrar sesión</a> </b> </FONT>
+                }
+
+            }
+            </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="content">
+        @RenderBody()
+
+        <!--Linea separación footer y body-->
+
+    </div>
+
+    <footer>
+        <p id="textoFooter">&copy; @DateTime.Now.Year - Mikhuna</p>
+    </footer>
+
+
+    <script src="~/Scripts/script.js"></script>
+    <script src ="/Scripts/Imagen.js"></script>
+    
+        <!--Librería para las imagenes-->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+</body>
+</html>

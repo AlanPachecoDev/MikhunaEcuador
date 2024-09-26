@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MikhunaMovilXF.Views.Home"
+             Title="Home Mikhuna"
+             NavigationPage.HasNavigationBar="false">
+    
+    <StackLayout Spacing="0">
+
+        <StackLayout HeightRequest="60" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" BackgroundColor="#683A1C" VerticalOptions="EndAndExpand" Spacing="60">
+            <Frame HasShadow="False" WidthRequest="80" Padding="0" BackgroundColor="#683A1C">
+                <ImageButton BackgroundColor="#683A1C"/>
+            </Frame>
+            <Frame  HasShadow="False" WidthRequest="100" Padding="0">
+                <!--<Label HorizontalOptions="Center" WidthRequest="150" Text="Home" Padding="160,0,0,0" TextColor="#fff" FontAttributes="Bold" FontSize="40"  VerticalTextAlignment="Center"/>-->
+
+                <Label BackgroundColor="#683A1C" Text="Home" FontSize="25" TextColor="#F0A15F" FontAttributes="Bold"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Frame>
+            <Frame  HasShadow="False" WidthRequest="80" BackgroundColor="#683A1C" Padding="0">
+                <ImageButton HorizontalOptions="End" Source="ExitUser" Padding="10,0,10,0" WidthRequest="50" Clicked="exit" BackgroundColor="#683A1C"/>
+            </Frame>
+        </StackLayout>
+        
+
+
+        <!--<Grid>-->
+
+            <!--Setea las dimensiones de las filas (las medidas de ancho y alto)-->
+            <!--<Grid.RowDefinitions>
+                --><!--Esto elimina un borde blanco intermedio de las filas--><!--
+                <RowDefinition Height="136" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>-->
+
+
+            <!--Acent es el color definido en la etiqueta Resources-->
+            
+                <!--Parte azul donde se muestra el logo de Xamarin-->
+                <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" >-->
+        
+        <ContentView >
+            
+            <StackLayout>
+                <AbsoluteLayout Padding="0" HeightRequest="140">
+                <Image HorizontalOptions="Center" Source="bannerComida2" />
+                
+                    <StackLayout AbsoluteLayout.LayoutBounds="70,55" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Frame Padding="0" CornerRadius="5" >
+                            <Entry HorizontalTextAlignment="Center" 
+                               PlaceholderColor="#A54E05" 
+                               Placeholder="¿Qué desea cocinar?" 
+                               TextColor="#A54E05" 
+                               FontSize="Medium" 
+                               WidthRequest="230" 
+                               BackgroundColor="#fff"/>
+                        </Frame>
+
+                    </StackLayout>
+
+                </AbsoluteLayout>
+            </StackLayout>
+            
+            <!--Header Mikhuna-->
+        </ContentView>
+        
+        <!--</StackLayout>-->
+
+            <ScrollView BackgroundColor="#F5B15C">
+            
+                <StackLayout Orientation="Vertical" Padding="50,24,50,24" Spacing="10">
+                <!--<Button Clicked="cargarRecetas" CornerRadius="5" Text="API" FontSize="21" BackgroundColor="#f1a224"></Button>-->
+
+
+                <ListView x:Name="ListaRecetas" HasUnevenRows="True" SelectionMode="Single">
+                    <ListView.ItemTemplate >
+                        <DataTemplate >
+                            <ViewCell >
+
+                                <Frame CornerRadius="10" Padding="0" Margin="0,0,0,15">
+                                    <StackLayout BackgroundColor="#000">
+                                        <StackLayout Spacing="0" Padding="0" IsVisible="True" BackgroundColor="#A54E05" >
+
+                                            <Label Text="{Binding Nombre}" 
+                                                   BackgroundColor="#F89800"
+                                                   FontSize="20"
+                                                   HorizontalTextAlignment="Center"
+                                                   Padding="0,7,0,7"/>
+
+                                            <Image Source="{Binding UrlImagen}" Aspect="AspectFill"/>
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <Button Clicked="GoToBuscarReceta" 
+                                                        BindingContext="{Binding RecetaID}" 
+                                                        CornerRadius="5" 
+                                                        Text="                  Ver             " 
+                                                        FontSize="15" 
+                                                        FontAttributes="Bold"
+                                                        BackgroundColor="#A54E05"
+                                                        HorizontalOptions="FillAndExpand"></Button>
+
+                                                <Button Clicked="EliminarReceta" 
+                                                        BindingContext="{Binding RecetaID}" 
+                                                        CornerRadius="5" 
+                                                        Text="Eliminar" 
+                                                        FontSize="15" 
+                                                        BackgroundColor="#924506"
+                                                        HorizontalOptions="FillAndExpand"></Button>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                        
+                                    
+                                </Frame>
+                                    
+                            </ViewCell>
+                            
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--/*Detail="{Binding Nombre}*/-->
+                <!---->
+                <!--<Frame CornerRadius="10" Padding="0" Margin="0,0,0,15">
+                        <Image Source="ceviche"/>
+                    </Frame>
+                    <Frame CornerRadius="10" Padding="0" Margin="0,0,0,15">
+                        <Image Source="ceviche"/>
+                    </Frame>-->
+
+                </StackLayout>
+
+            </ScrollView>
+        <!--</Grid>-->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="60" BackgroundColor="#683A1C" VerticalOptions="EndAndExpand" Padding="60,5,60,5">
+            <Frame Padding="3,3,3,3" CornerRadius="30" BackgroundColor="#683A1C">
+                <ImageButton  Source="User" HorizontalOptions="Center" WidthRequest="50" Clicked="GoToProfile" BackgroundColor="#683A1C"/>
+            </Frame>
+            <Frame Padding="3,3,3,3"  CornerRadius="30" BackgroundColor="#683A1C">
+                <ImageButton Source="Home" HorizontalOptions="Center" WidthRequest="50" Clicked="GoToHome" BackgroundColor="#683A1C"/>
+            </Frame>
+            <Frame Padding="3,3,3,3" CornerRadius="30" BackgroundColor="#683A1C">
+                <ImageButton Source="AddFood" HorizontalOptions="Center" WidthRequest="50" Clicked="GoToAddFood" BackgroundColor="#683A1C"/>
+            </Frame>
+        </StackLayout>
+
+    </StackLayout>
+    
+</ContentPage>

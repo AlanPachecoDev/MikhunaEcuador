@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MikhunaEcuadorDBModelStoreContainer" CdmEntityContainer="MikhunaEcuadorDBEntities">
+    <EntitySetMapping Name="Calificacion">
+      <EntityTypeMapping TypeName="MikhunaEcuadorDBModel.Calificacion">
+        <MappingFragment StoreEntitySet="Calificacion">
+          <ScalarProperty Name="CalificacionID" ColumnName="CalificacionID" />
+          <ScalarProperty Name="NumeroEstrellas" ColumnName="NumeroEstrellas" />
+          <ScalarProperty Name="RecetaID" ColumnName="RecetaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Favoritos">
+      <EntityTypeMapping TypeName="MikhunaEcuadorDBModel.Favoritos">
+        <MappingFragment StoreEntitySet="Favoritos">
+          <ScalarProperty Name="Calificacion" ColumnName="Calificacion" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="RecetaID" ColumnName="RecetaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Imagen">
+      <EntityTypeMapping TypeName="MikhunaEcuadorDBModel.Imagen">
+        <MappingFragment StoreEntitySet="Imagen">
+          <ScalarProperty Name="ImagenID" ColumnName="ImagenID" />
+          <ScalarProperty Name="Archivo" ColumnName="Archivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ingrediente">
+      <EntityTypeMapping TypeName="MikhunaEcuadorDBModel.Ingrediente">
+        <MappingFragment StoreEntitySet="Ingrediente">
+          <ScalarProperty Name="IngredienteID" ColumnName="IngredienteID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Unidad" ColumnName="Unidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Receta">
+      <EntityTypeMapping TypeName="MikhunaEcuadorDBModel.Receta">
+        <MappingFragment StoreEntitySet="Receta">
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="RecetaID" ColumnName="RecetaID" />
+          <ScalarProperty Name="ImagenID" ColumnName="ImagenID" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Duracion" ColumnName="Duracion" />
+          <ScalarProperty Name="CalificacionPromedio" ColumnName="CalificacionPromedio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecetaIngrediente">
+      <EntityTypeMapping TypeName="MikhunaEcuadorDBModel.RecetaIngrediente">
+        <MappingFragment StoreEntitySet="RecetaIngrediente">
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="IngredienteID" ColumnName="IngredienteID" />
+          <ScalarProperty Name="RecetaID" ColumnName="RecetaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="MikhunaEcuadorDBModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="ImagenID" ColumnName="ImagenID" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="IngredienteImagen" TypeName="MikhunaEcuadorDBModel.IngredienteImagen" StoreEntitySet="IngredienteImagen">
+      <EndProperty Name="Ingrediente">
+        <ScalarProperty Name="IngredienteID" ColumnName="IngredienteID" />
+      </EndProperty>
+      <EndProperty Name="Imagen">
+        <ScalarProperty Name="ImagenID" ColumnName="ImagenID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Insignia" TypeName="MikhunaEcuadorDBModel.Insignia" StoreEntitySet="Insignia">
+      <EndProperty Name="Imagen">
+        <ScalarProperty Name="ImagenID" ColumnName="ImagenID" />
+      </EndProperty>
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RecetasTerminadas" TypeName="MikhunaEcuadorDBModel.RecetasTerminadas" StoreEntitySet="RecetasTerminadas">
+      <EndProperty Name="Receta">
+        <ScalarProperty Name="RecetaID" ColumnName="RecetaID" />
+      </EndProperty>
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

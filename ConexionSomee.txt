@@ -1,0 +1,11 @@
+workstation id=MikhunaDB.mssql.somee.com;
+
+packet size=4096;
+
+user id=AlanPacheco_SQLLogin_1;
+
+pwd=br2vck1d1v;
+
+data source=MikhunaDB.mssql.somee.com;
+
+persist security info=False;initial catalog=MikhunaDB

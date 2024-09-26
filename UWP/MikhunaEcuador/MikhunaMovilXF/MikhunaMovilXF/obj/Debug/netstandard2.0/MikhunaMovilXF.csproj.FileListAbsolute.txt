@@ -1,0 +1,83 @@
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\AgregarReceta.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\BuscarReceta.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\Home.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\LoginPage.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\Perfil.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\RegisterPage.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.AssemblyInfoInputs.cache
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.AssemblyInfo.cs
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.csproj.CoreCompileInputs.cache
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\MikhunaMovilXF.deps.json
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\ref\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\MikhunaMovilXF.pdb
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\ref\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.pdb
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Nuevo\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.csproj.AssemblyReference.cache
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\MikhunaMovilXF.deps.json
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\ref\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\MikhunaMovilXF.pdb
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.csproj.AssemblyReference.cache
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\AgregarReceta.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\BuscarReceta.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\Home.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\LoginPage.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\Perfil.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\RegisterPage.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.AssemblyInfoInputs.cache
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.AssemblyInfo.cs
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.csproj.CoreCompileInputs.cache
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\ref\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\Proyecto Progra\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.pdb
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\MikhunaMovilXF.deps.json
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\ref\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\MikhunaMovilXF.pdb
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.csproj.AssemblyReference.cache
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\AgregarReceta.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\BuscarReceta.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\Home.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\LoginPage.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\Perfil.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\RegisterPage.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.AssemblyInfoInputs.cache
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.AssemblyInfo.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.csproj.CoreCompileInputs.cache
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\ref\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.pdb
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\MikhunaMovilXF.deps.json
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\ref\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\bin\Debug\netstandard2.0\MikhunaMovilXF.pdb
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\AgregarReceta.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\BuscarReceta.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\Home.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\LoginPage.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\Perfil.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\View\RegisterPage.xaml.g.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.AssemblyInfoInputs.cache
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.AssemblyInfo.cs
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.csproj.CoreCompileInputs.cache
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\ref\MikhunaMovilXF.dll
+C:\Users\josue\OneDrive\Escritorio\MikhunaEcuador\UWP\MikhunaEcuador\MikhunaMovilXF\MikhunaMovilXF\obj\Debug\netstandard2.0\MikhunaMovilXF.pdb

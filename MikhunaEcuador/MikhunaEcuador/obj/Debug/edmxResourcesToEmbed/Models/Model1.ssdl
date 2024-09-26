@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MikhunaEcuadorDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Calificacion">
+    <Key>
+      <PropertyRef Name="CalificacionID" />
+      <PropertyRef Name="RecetaID" />
+    </Key>
+    <Property Name="CalificacionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumeroEstrellas" Type="float" />
+    <Property Name="RecetaID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Favoritos">
+    <Key>
+      <PropertyRef Name="UsuarioID" />
+      <PropertyRef Name="RecetaID" />
+    </Key>
+    <Property Name="Calificacion" Type="float" />
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="RecetaID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Imagen">
+    <Key>
+      <PropertyRef Name="ImagenID" />
+    </Key>
+    <Property Name="ImagenID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Archivo" Type="image" />
+  </EntityType>
+  <EntityType Name="Ingrediente">
+    <Key>
+      <PropertyRef Name="IngredienteID" />
+    </Key>
+    <Property Name="IngredienteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unidad" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="IngredienteImagen">
+    <Key>
+      <PropertyRef Name="IngredienteID" />
+      <PropertyRef Name="ImagenID" />
+    </Key>
+    <Property Name="IngredienteID" Type="int" Nullable="false" />
+    <Property Name="ImagenID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Insignia">
+    <Key>
+      <PropertyRef Name="ImagenID" />
+      <PropertyRef Name="UsuarioID" />
+    </Key>
+    <Property Name="ImagenID" Type="int" Nullable="false" />
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Receta">
+    <Key>
+      <PropertyRef Name="RecetaID" />
+    </Key>
+    <Property Name="RecetaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ImagenID" Type="int" />
+    <Property Name="Categoria" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="Duracion" Type="float" />
+    <Property Name="CalificacionPromedio" Type="float" />
+    <Property Name="Descripción" Type="nvarchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="RecetaIngrediente">
+    <Key>
+      <PropertyRef Name="IngredienteID" />
+      <PropertyRef Name="RecetaID" />
+    </Key>
+    <Property Name="Cantidad" Type="float" />
+    <Property Name="IngredienteID" Type="int" Nullable="false" />
+    <Property Name="RecetaID" Type="int" Nullable="false" />
+    <Property Name="Descripción" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="RecetasTerminadas">
+    <Key>
+      <PropertyRef Name="UsuarioID" />
+      <PropertyRef Name="RecetaID" />
+    </Key>
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="RecetaID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="UsuarioID" />
+    </Key>
+    <Property Name="UsuarioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ImagenID" Type="int" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Correo" Type="nvarchar" MaxLength="100" />
+    <Property Name="Clave" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nivel" Type="int" />
+    <Property Name="FechaRegistro" Type="date" />
+  </EntityType>
+  <Association Name="fk_ImagenID_Insignia">
+    <End Role="Imagen" Type="Self.Imagen" Multiplicity="1" />
+    <End Role="Insignia" Type="Self.Insignia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Imagen">
+        <PropertyRef Name="ImagenID" />
+      </Principal>
+      <Dependent Role="Insignia">
+        <PropertyRef Name="ImagenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ImagenID_Receta">
+    <End Role="Imagen" Type="Self.Imagen" Multiplicity="0..1" />
+    <End Role="Receta" Type="Self.Receta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Imagen">
+        <PropertyRef Name="ImagenID" />
+      </Principal>
+      <Dependent Role="Receta">
+        <PropertyRef Name="ImagenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ImagenID_Usuario">
+    <End Role="Imagen" Type="Self.Imagen" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Imagen">
+        <PropertyRef Name="ImagenID" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="ImagenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_IngredienteID_IngredienteImagen">
+    <End Role="Ingrediente" Type="Self.Ingrediente" Multiplicity="1" />
+    <End Role="IngredienteImagen" Type="Self.IngredienteImagen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingrediente">
+        <PropertyRef Name="IngredienteID" />
+      </Principal>
+      <Dependent Role="IngredienteImagen">
+        <PropertyRef Name="IngredienteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_IngredienteID_RecetaIngrediente">
+    <End Role="Ingrediente" Type="Self.Ingrediente" Multiplicity="1" />
+    <End Role="RecetaIngrediente" Type="Self.RecetaIngrediente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingrediente">
+        <PropertyRef Name="IngredienteID" />
+      </Principal>
+      <Dependent Role="RecetaIngrediente">
+        <PropertyRef Name="IngredienteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RecetaID_Calificacion">
+    <End Role="Receta" Type="Self.Receta" Multiplicity="1" />
+    <End Role="Calificacion" Type="Self.Calificacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Receta">
+        <PropertyRef Name="RecetaID" />
+      </Principal>
+      <Dependent Role="Calificacion">
+        <PropertyRef Name="RecetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RecetaID_Favoritos">
+    <End Role="Receta" Type="Self.Receta" Multiplicity="1" />
+    <End Role="Favoritos" Type="Self.Favoritos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Receta">
+        <PropertyRef Name="RecetaID" />
+      </Principal>
+      <Dependent Role="Favoritos">
+        <PropertyRef Name="RecetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RecetaID_IngredienteImagen">
+    <End Role="Imagen" Type="Self.Imagen" Multiplicity="1" />
+    <End Role="IngredienteImagen" Type="Self.IngredienteImagen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Imagen">
+        <PropertyRef Name="ImagenID" />
+      </Principal>
+      <Dependent Role="IngredienteImagen">
+        <PropertyRef Name="ImagenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RecetaID_RecetaIngrediente">
+    <End Role="Receta" Type="Self.Receta" Multiplicity="1" />
+    <End Role="RecetaIngrediente" Type="Self.RecetaIngrediente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Receta">
+        <PropertyRef Name="RecetaID" />
+      </Principal>
+      <Dependent Role="RecetaIngrediente">
+        <PropertyRef Name="RecetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RecetaID_RecetasTerminadas">
+    <End Role="Receta" Type="Self.Receta" Multiplicity="1" />
+    <End Role="RecetasTerminadas" Type="Self.RecetasTerminadas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Receta">
+        <PropertyRef Name="RecetaID" />
+      </Principal>
+      <Dependent Role="RecetasTerminadas">
+        <PropertyRef Name="RecetaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UsuarioID_Favoritos">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Favoritos" Type="Self.Favoritos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="Favoritos">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UsuarioID_Insignia">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Insignia" Type="Self.Insignia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="Insignia">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UsuarioID_RecetasTerminadas">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="RecetasTerminadas" Type="Self.RecetasTerminadas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="RecetasTerminadas">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MikhunaEcuadorDBModelStoreContainer">
+    <EntitySet Name="Calificacion" EntityType="Self.Calificacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Favoritos" EntityType="Self.Favoritos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Imagen" EntityType="Self.Imagen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ingrediente" EntityType="Self.Ingrediente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IngredienteImagen" EntityType="Self.IngredienteImagen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Insignia" EntityType="Self.Insignia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Receta" EntityType="Self.Receta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RecetaIngrediente" EntityType="Self.RecetaIngrediente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RecetasTerminadas" EntityType="Self.RecetasTerminadas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_ImagenID_Insignia" Association="Self.fk_ImagenID_Insignia">
+      <End Role="Imagen" EntitySet="Imagen" />
+      <End Role="Insignia" EntitySet="Insignia" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ImagenID_Receta" Association="Self.fk_ImagenID_Receta">
+      <End Role="Imagen" EntitySet="Imagen" />
+      <End Role="Receta" EntitySet="Receta" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ImagenID_Usuario" Association="Self.fk_ImagenID_Usuario">
+      <End Role="Imagen" EntitySet="Imagen" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="fk_IngredienteID_IngredienteImagen" Association="Self.fk_IngredienteID_IngredienteImagen">
+      <End Role="Ingrediente" EntitySet="Ingrediente" />
+      <End Role="IngredienteImagen" EntitySet="IngredienteImagen" />
+    </AssociationSet>
+    <AssociationSet Name="fk_IngredienteID_RecetaIngrediente" Association="Self.fk_IngredienteID_RecetaIngrediente">
+      <End Role="Ingrediente" EntitySet="Ingrediente" />
+      <End Role="RecetaIngrediente" EntitySet="RecetaIngrediente" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RecetaID_Calificacion" Association="Self.fk_RecetaID_Calificacion">
+      <End Role="Receta" EntitySet="Receta" />
+      <End Role="Calificacion" EntitySet="Calificacion" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RecetaID_Favoritos" Association="Self.fk_RecetaID_Favoritos">
+      <End Role="Receta" EntitySet="Receta" />
+      <End Role="Favoritos" EntitySet="Favoritos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RecetaID_IngredienteImagen" Association="Self.fk_RecetaID_IngredienteImagen">
+      <End Role="Imagen" EntitySet="Imagen" />
+      <End Role="IngredienteImagen" EntitySet="IngredienteImagen" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RecetaID_RecetaIngrediente" Association="Self.fk_RecetaID_RecetaIngrediente">
+      <End Role="Receta" EntitySet="Receta" />
+      <End Role="RecetaIngrediente" EntitySet="RecetaIngrediente" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RecetaID_RecetasTerminadas" Association="Self.fk_RecetaID_RecetasTerminadas">
+      <End Role="Receta" EntitySet="Receta" />
+      <End Role="RecetasTerminadas" EntitySet="RecetasTerminadas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UsuarioID_Favoritos" Association="Self.fk_UsuarioID_Favoritos">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Favoritos" EntitySet="Favoritos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UsuarioID_Insignia" Association="Self.fk_UsuarioID_Insignia">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Insignia" EntitySet="Insignia" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UsuarioID_RecetasTerminadas" Association="Self.fk_UsuarioID_RecetasTerminadas">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="RecetasTerminadas" EntitySet="RecetasTerminadas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

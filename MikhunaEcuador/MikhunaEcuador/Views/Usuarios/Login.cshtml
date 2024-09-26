@@ -1,0 +1,179 @@
+﻿@model MikhunaEcuador.Models.Usuario
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="padreLogin">
+
+    <!--Muestra mensaje de error si sucede en el login-->
+    @{
+        if (!string.IsNullOrEmpty(ViewBag.Message))
+        {
+            <div class="alert alert-warning">
+                @ViewBag.Message
+            </div>
+        }
+
+    }
+
+    <div class="login cardLogin" id="cardLoginID">
+        <div class="giroInterno-login" id="gI">
+            <div class="giroFrontal-login" id="gF">
+
+                <img id="logoLogin" src="~/Images/logoFinal.png" />
+
+                <form action="/Usuarios/ValidarUsuario" method="post">
+
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="div-Form">
+
+                        <div class="fondo">
+                            <img class="logosForm" src="~/Images/persona.png" />
+                        </div>
+
+                        <input class="nombreUsuario" type="text" name="usuario" placeholder="Nombre de usuario" />
+                        <!--Html.EditorFor(model => model.NickName, new { htmlAttributes = new { type = "text", id = "nombreUsuario", placeholder = "Nombre de usuario", name = "usuario"} })-->
+                        <!--Html.ValidationMessageFor(model => model.NickName, "", new { class = "text-danger" })-->
+
+                    </div>
+                    <p></p>
+
+                    <div class="div-Form">
+                        <div class="fondo">
+                            <img class="logosForm" src="~/Images/candado.png" />
+                        </div>
+                        <input id="contra" type="password" name="clave" placeholder="Ingrese su contraseña" />
+                        <!--Html.EditorFor(model => model.Clave, new { htmlAttributes = new { id = "contra", type = "password", placeholder = "Ingrese su contraseña", name = "clave" } })-->
+                        <!--Html.ValidationMessageFor(model => model.Clave, "", new { class = "text-danger" })-->
+                        <!--<input id="contra" type="password" placeholder="Ingrese su contraseña" />-->
+                    </div>
+                    <div>
+                        <input class="btn" type="submit" value="Ingresar" />
+                    </div>
+
+
+
+                </form>
+                <div>
+                    <button class="btn" id="btnRegister" onclick="girarLogin();">Crear cuenta</button>
+                </div>
+
+            </div>
+            <div class="giroTrasero-login" id="gT">
+
+                <img id="logoLogin" src="~/Images/logoFinal.png" />
+
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="div-Form">
+                        <!--<div class="form-group">  class="col-md-10"-->
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.NickName, new { htmlAttributes = new { @id = "usuario", @placeholder = "Nombre de usuario" } })
+                            @Html.ValidationMessageFor(model => model.NickName, "", new { @class = "text-danger" })
+
+                            <!--</div>
+                            <input id="usuario" type="text" placeholder="Ingrese su nombre" />-->
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="div-Form">
+
+                        <!--<input id="nombre" type="text" placeholder="Ingrese su usuario" />-->
+                        @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @type = "email", @id = "email", @placeholder = "Correo electrónico" } })
+                        @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
+                    </div>
+                    <p></p>
+                    <div class="div-Form">
+                        @Html.EditorFor(model => model.Clave, new { htmlAttributes = new { @id = "contra2", @type = "password", @placeholder = "Ingrese una contraseña" } })
+                        @Html.ValidationMessageFor(model => model.Clave, "", new { @class = "text-danger" })
+
+                        <!--<input id="contra" type="password" placeholder="Ingrese su contraseña" />-->
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Crear" class="btn" />
+                    </div>
+                    <div>
+                        <button class="btn" id="btnLogin" type="button" onclick='girarLogin2();'>Iniciar sesión</button>
+                    </div>
+
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="agranda">
+
+</div>
+<!-- de aqui saque las fotos de los numeros de las recetas: https://es.m.wikipedia.org/wiki/Archivo:NYCS-bull-trans-9.svg-->
+<!--
+<h2>Create</h2>
+
+
+using (Html.BeginForm())
+{
+    Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Usuario</h4>
+        <hr />
+        Html.ValidationSummary(true, "", new { class = "text-danger" })
+        <div class="form-group">
+           Html.LabelFor(model => model.NickName, htmlAttributes: new { class = "control-label col-md-2" })
+            <div class="col-md-10">
+               Html.EditorFor(model => model.NickName, new { htmlAttributes = new { class = "form-control" } })
+                Html.ValidationMessageFor(model => model.NickName, "", new { class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Html.LabelFor(model => model.Correo, htmlAttributes: new { class = "control-label col-md-2" })
+            <div class="col-md-10">
+                Html.EditorFor(model => model.Correo, new { htmlAttributes = new { class = "form-control" } })
+                Html.ValidationMessageFor(model => model.Correo, "", new { class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            Html.LabelFor(model => model.Clave, htmlAttributes: new { class = "control-label col-md-2" })
+            <div class="col-md-10">
+                Html.EditorFor(model => model.Clave, new { htmlAttributes = new { class = "form-control" } })
+                Html.ValidationMessageFor(model => model.Clave, "", new { class = "text-danger" })
+            </div>
+        </div>
+
+        <!--<div class="form-group">
+           Html.LabelFor(model => model.Nivel, htmlAttributes: new { class = "control-label col-md-2" })
+            <div class="col-md-10">
+                Html.EditorFor(model => model.Nivel, new { htmlAttributes = new { class = "form-control" } })
+                Html.ValidationMessageFor(model => model.Nivel, "", new { class = "text-danger" })
+            </div>
+        </div>-
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Create" class="btn btn-default" />
+    </div>
+</div>
+    </div>
+}
+
+<div>
+    Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>-->
+<script src="~/Scripts/script.js"></script>

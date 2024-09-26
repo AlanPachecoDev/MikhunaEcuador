@@ -1,0 +1,98 @@
+﻿@model IEnumerable<MikhunaEcuador.Models.Receta>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="ban">
+
+
+    <img id="img-ban" src="~/Images/bannerComida2-1.jpg" />
+
+    <div class="texto-encima">
+
+        <h1 id="mikhuna-ban">Mikhuna</h1>
+
+        <p class="mb-txt">Tu lugar para cocinar</p>
+
+
+        <!--using (Html.BeginForm())-->
+        <form class="mb" action="~/Home/Index" method="post">
+
+            <input class="buscador" name="Nombre" type="text" placeholder="¿Qué te gustaria cocinar?" />
+
+            <input class="btnBuscar" type="submit" value="Buscar" />
+        </form>
+
+
+        <!--Html.TextBox("¿Que te gustaría preparar?")-->
+        <!--
+        <form class="mb">
+            <input class="buscador" type="text" placeholder="¿Qué te gustaria probar?" />
+
+        </form>
+            -->
+        <!--<p> <a href="https://asp.net"> Learn more &raquo; </a> </p>-->
+    </div>
+
+
+
+</div>
+
+<div class="contenido">
+
+    <!--Título-->
+    <center>
+        <h1 class="encabezado">Recetas</h1>
+    </center>
+
+
+    <!--***********Card Recetas***********-->
+    
+    <div class="recetas">
+
+        <div class="categoria-receta">
+
+            <div class="receta-fila">
+
+                @foreach (var item in Model)
+                {
+                    <div class="arreglaTodo">
+                        <div class="card">
+                            <div class="giro-interno">
+                                <div class="giro-frontal">
+                                    <img src="@Html.DisplayFor(modelItem => item.UrlImagen)" class="imagen-card"/>
+                                </div>
+                                <div class="giro-detras ">
+                                    <h1>@Html.DisplayFor(modelItem => item.Nombre)</h1>
+                                    <div class="reloj">
+                                        <p>@Html.DisplayFor(modelItem => item.Duracion) minutos</p>
+                                        <img src="~/Images/relojColor.png" class="imagen-card-detras" />
+                                    </div>
+                                    
+                                    <div class="elim">
+                                        <form action="~/Recetas/Delete" method="post">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@item.RecetaID" />
+                                            <input class="verMas bn" value="Eliminar" type="submit" />
+                                        </form>
+                                        <form action="~/Home/BuscarReceta" method="post">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@item.RecetaID" />
+                                            <input class="verMas" value="Ver Mas" type="submit" />
+                                        </form>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>  

@@ -1,0 +1,91 @@
+﻿@model MikhunaEcuador.Models.Usuario
+
+@{
+    ViewBag.Title = "Perfil";
+}
+
+
+
+<!--Hagan de aquí para abajo-->
+
+<html lang="es">
+
+<body>
+
+    <div class="container">
+        <div class="perfil-header">
+            <h1 class="titPerfil">Perfil</h1>
+
+
+
+            <!--Carga La imagen-->
+            <div class="perfil-img">
+                <img src="@Model.Imagen" id="imgPreviewPerfil">
+            </div>
+
+            <!--Usuario-->
+            <div class="contTit">
+                <h1 id="nombrePerfil">@Model.NickName</h1>
+            </div>
+            
+
+            <div id="labelImg">
+                <label for="imageUploaderPerfil" id="forImageUploaderPerfil">Seleccionar archivo</label>
+                <input id="imageUploaderPerfil" class="inputsReceta" type="file" accept="image/png, .jpg, .jpeg, image/gif" name="archivitoPerfil">
+            </div>
+
+            <!--Guardar-->
+            <form action="/Usuarios/GuardarImagenPerfil" method="post">
+
+                <input id="UrlImgPerfil" type="hidden" name="UrlImgPerfil" />
+
+                <input id="guardarImgPerfil" class="btn btnH" type="submit" value="Guardar" />
+            </form>
+
+
+        </div>
+
+        <!--Parte de abajo-->
+        <div class="contenido-perfil">
+            <h1 class="comentarioTit">Información de Perfil</h1>
+
+            <div class="datos-perfil">
+                <form action="/Usuarios/EditarUsuario" method="post">
+                    <div id="formPer">
+                        <h2>Nombre de usuario</h2>
+                        <input type="text" class="inputsPerfil" value="@Model.NickName" name="NombreUsuario" />
+                        <h2>Correo electrónico</h2>
+                        <input type="email" class="inputsPerfil" value="@Model.Correo" name="Correo" />
+                        <h2>Clave</h2>
+                        <input type="password" class="inputsPerfil" value="@Model.Clave " name="Clave" />
+                        <h2 class="inputsPerfil">Nivel</h2>
+
+                        <div id="labelPerfil">
+                            @Model.Nivel
+                        </div>
+                    </div>
+                    
+                    <input id="guardarImgPerfil" class="btn btnH" type="submit" value="Guardar" />
+                </form>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</body>
+
+
+    </html>
+    <script src="/Scripts/ImagenPerfil.js"></script>
+
+
+
+
+
+
+
+

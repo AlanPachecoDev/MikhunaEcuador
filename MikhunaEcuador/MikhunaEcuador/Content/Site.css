@@ -1,0 +1,1001 @@
+﻿
+/*---------------------------NUESTRO--------------------------------------------------------*/
+body {
+    /*display: grid;*/
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    height: 100vh;
+}
+
+.hbar {
+    color: black;
+    /*background: linear-gradient(to bottom, yellow, blue);*/
+    height: 3rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.centrarHeader {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.txtMikhuna {
+    color: #ff7500;
+    text-decoration: none;
+    text-decoration-color: unset;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+.m {
+    color: #ff0800;
+}
+
+.n {
+    margin-right: 4rem;
+}
+
+/*content está el _Layout*/
+.content {
+    /*background-color: #F9F5DA;*/
+    background: radial-gradient(#EDF2C4, #F2E0BD, #F5B15C);
+    /*Pone el tamaño mínimo del cuerpo en el 100%, de esta manera
+        garantizo que el footer esté pegado abajo
+        min-height: 100vh;
+    */
+}
+
+.ban {
+    position: relative;
+    text-align: center;
+}
+
+#img-ban {
+    max-width: 100%;
+    max-height: 600px;
+}
+
+#img-banLayout {
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(70%);
+}
+
+.texto-encima {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    background-color: #7a5640;
+    height: 3rem;
+    color: white;
+    text-decoration: none;
+    text-decoration-color: unset;
+}
+
+#textoFooter {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+#logo {
+    width: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+.imagen-card-detras {
+    max-width: 10%;
+    margin-left: 1rem;
+}
+
+.reloj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*--------------------RECETAS----------------------------------------*/
+#mikhuna-ban {
+    font-size: 100px;
+    margin: 0px;
+}
+
+.mb {
+    margin: 0px;
+    font-size: 35px;
+    display: flex;
+}
+
+.mb-txt {
+    margin: 0px;
+    font-size: 35px;
+}
+
+.buscador {
+    width: 50rem;
+    height: 2rem;
+    
+}
+
+.cats1 {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(4, 0.01fr);
+    /*grid-gap: 1.5rem;*/
+    align-items: center;
+    justify-content: center;
+}
+
+.cats {
+    width: 274px;
+}
+
+.elim {
+    display: block;
+}
+
+.categoria-receta {
+    /*margin-bottom: 1rem;*/
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+.arreglaTodo {
+    height: 8rem;
+    margin-bottom:2rem;
+}
+
+.receta-fila {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(4, 0fr);
+    grid-gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+    /*margin-bottom: 2rem;*/
+}
+
+/*.card {
+    position:relative;
+
+
+    /*border: 1px solid black;
+    width: 100%;
+    border-radius: 10px;
+    /*overflow: hidden;
+    background: #ffff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    /*Centran las cards
+    padding: 0px;
+    margin: 0px;
+    
+}
+*/
+
+
+/* Efecto de movimiento en las tarjetas*/
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translate(-3%);
+}
+
+.imagen-card {
+    max-width: 274px;
+    max-height: 155px;
+    min-width: 274px;
+    min-height: 155px;
+    border-radius: 10px;
+    max-width: 50%;
+}
+
+/*---------------card giratoria funciona-----------------*/
+
+
+/* Establecemos el ancho y la altura como deseemos, elimina la perspectiva si no deseas el efecto 3D */
+.card {
+    /*position: relative;*/
+    border: 1px solid black;
+    width: 276px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    background-color: transparent;
+    /*width: 300px;
+    height: 300px;*/
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Borra esta línea si no quieres el efecto 3D */
+
+
+}
+
+/* Este contenedor es necesario para colocar el anverso y el reverso */
+.giro-interno {
+    position: relative;
+    width: 274px;
+    height: 155px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+/* Hace un giro horizontal cuando muevas el ratón sobre el contenedor de la caja */
+.card:hover .giro-interno, .imagen-card {
+    transform: rotateY(180deg);
+    height: 11rem;
+}
+/* Coloca el anverso y el reverso */
+.giro-frontal, .giro-detras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+/* Estilos de la parte trasera (alternativa por si falta la imagen) */
+.giro-frontal {
+    background-color: transparent;
+    color: black;
+}
+/* Estilos de la parte trasera */
+.giro-detras {
+    background: radial-gradient(#fb9a00, #fb9a00, #f28e22);
+    color: white;
+    transform: rotateY(-180deg);
+    width: 100%;
+    height: 100%;
+    /*Centran las cards*/
+    justify-content: center;
+    font-size: 12px;
+}
+
+    .giro-detras:hover .imagen-card {
+        height: 115px;
+    }
+
+
+.verMas {
+    background-color: blue;
+    text-decoration: none;
+    
+    margin-top: 10px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    animation: animate 1s linear infinite;
+    letter-spacing: 2px;
+}
+
+.bn {
+background-color:red;
+}
+
+/******************LOGIN********************/
+
+.padreLogin {
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.login {
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.8);
+    background: radial-gradient(#EDF2C4, #F2E0BD, #F5B15C);
+    width: 30rem;
+    height: 32.5rem;
+    display: inline-block;
+    /* border: 1px solid black;*/
+    border-radius: 10px;
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    /*display: inline;*/
+    text-align: center;
+}
+
+/*Esconde la cara trasera para que en un inicio no se vea*/
+.giroTrasero-login {
+    visibility: hidden;
+}
+
+.agranda {
+    height: 100vh;
+}
+
+#logoLogin {
+    max-width: 10rem;
+    max-height: 10rem;
+    /*margin-top: 1rem;*/
+}
+
+.form-login {
+    /*border-top:1px solid #656565;*/
+}
+
+.div-Form {
+    display: inline-flex;
+    margin-top: 1rem;
+}
+
+.fondo {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: #f1a224;
+    width: 2.5rem;
+    justify-content: center;
+}
+
+/***********Imagenes del Login***********/
+
+.logosForm {
+    max-width: 2rem;
+    max-height: 2rem;
+    display: flow;
+}
+
+.btn, .in, .nombreUsuario, #usuario, #contra, #contra2, #email, #nombre, .inputsPerfil{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    height: 2.5rem;
+    margin-top: 0px;
+    justify-content: center;
+    font-family: 'Global User Interface';
+    font-size: medium;
+    animation: animate 1s linear infinite;
+    letter-spacing: 2px;
+}
+
+.btn {
+    margin-top: 1.5rem;
+    margin-bottom:1rem;
+    width: 11rem;
+    height: 2.5rem;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px #F5B15C;
+    background-color: #f1a224;
+    font-family: 'Global User Interface';
+    font-size: x-large;
+}
+
+hov:hover {
+   background-color:#ff7500;
+}
+
+/*************RECETARIOS**************/
+
+.buscarReceta {
+    width: 100%;
+    display:inline-table;
+    justify-items:center;
+}
+
+.cabeceraBR {
+    margin-top:1rem;
+    text-align:center;
+}
+.cuadroTexto {
+}
+
+.imgBR {
+    margin:auto;
+    width: 75rem;
+    height: 40rem;
+    font-family: 'Malgun Gothic';
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+#img-banReceta {
+    width: 100%;
+    height: 100%;
+}
+
+.fondo-texto {
+    margin: auto;
+    background: #f5be77;
+    width: 75rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    font-size: 35px;
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+
+#nombreReceta {
+}
+
+.clasificacion {
+}
+
+.fondo-textoIngredientes {
+    margin: auto;
+    background-color: #e3eff1;
+    width: 75rem;
+    border-radius: 12px;
+    font-family: 'Malgun Gothic';
+    text-align: left;
+    padding-left:1rem;
+    padding-bottom:2rem;
+}
+
+
+.checks {
+    
+}
+
+.txtCentro {
+    padding-top: 2rem;
+}
+
+.check {
+    margin-top: 0.8rem;
+}
+
+.fondo-textoPreparacion {
+    /* box-shadow: 0px 1px 10px rgba(0,0,0,0.8);*/
+    background: #e3eff1;
+    width: 76rem;
+    border-radius: 12px;
+    font-family: 'Malgun Gothic';
+    margin: auto;
+}
+
+.fondo-textoPreparacion, .fondo-textoIngredientes {
+    margin-top: 2rem;
+}
+
+.preparacion {
+    margin-left: 2rem;
+    padding-bottom:2rem;
+}
+
+.horizontal {
+    padding-top:0.4rem;
+    text-align:center;
+    background-color:red;
+    width:2rem;
+    height:1.7rem;
+    border-radius:100%;
+    color:white;
+    font-size:1.3rem;
+    font-stretch:ultra-condensed;
+    font-family:'Agency FB'; 
+}
+
+/***************Calificacion de estrellas*************/
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+}
+
+#form p {
+    text-align: center;
+}
+
+#form label {
+    font-size: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    color: black;
+}
+
+.clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+    color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+    color: orange;
+}
+
+
+
+/*************Agregar Nueva Receta**********/
+
+.padreNuevaReceta {
+    display: flex;
+}
+
+.nuevaReceta-Izquierda {
+    width: 30%;
+    background-color: #e3eff1;
+    /*border: 1px solid black;*/
+    border-radius: 12px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.nuevaReceta-Derecha {
+    width: 70%;
+    background-color: #e3d5c5;
+    /*border: 1px solid black;*/
+    border-radius: 12px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.derecha-Izquierda {
+    text-align: center;
+    justify-content: center;
+}
+
+
+.elementos-Izquierda {
+    margin-top: 0.9rem;
+    margin-bottom: 0.9rem;
+}
+
+.txtAreas {
+    height: 11rem;
+    background-color: white;
+    border-radius: 12px;
+    margin: 1rem;
+}
+
+.inputs {
+    /*border: 1px solid black;*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.interno {
+    width: 30%;
+    text-align: center;
+}
+
+.externo {
+    width: 70%;
+}
+
+.categoriaDerecha {
+}
+
+.imagenDerecha {
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 10px;
+}
+
+#imgReceta {
+    max-width: 90%;
+    max-height: 190%;
+    border-radius: 12px;
+}
+
+.imagenExterno {
+    text-align: center;
+}
+
+.btn-nuevareceta {
+    margin-top: 0.3rem;
+    width: 5.2rem;
+    height: 1.7rem;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px #F5B15C;
+    background-color: #f1a224;
+    font-family: 'Global User Interface';
+    font-size: medium;
+    border: transparent;
+}
+
+
+
+/************Crear nueva receta*******/
+.Receta {
+    width: 100%;
+    background: #f5be77;
+    /*width: 300px;
+    height: 490px;*/
+    border-radius: 7px;
+    display: inline-flex;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+}
+
+.Receta-Iz {
+    width:100%;
+    text-align:center;
+    margin:auto;
+}
+
+.Receta_Img {
+    width: 100%;
+    text-align: center;
+}
+
+.fondoblanco {
+    width: 90%;
+    height: 30rem;
+    border-radius: 7px;
+    background-color: white;
+    margin: auto;
+}
+
+.inputsReceta {
+    width: 25rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 9px;
+}
+
+.bCrear {
+    text-align:center;
+    width:100%;
+}
+/*--------------------*/
+
+
+
+#imagePreview {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+
+.dimensionimagen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+#imageUploader {
+    margin-bottom: 1rem;
+    display:none;
+    background-color:#ea8127;
+}
+
+#forImageUploader {
+    padding-top:0.3rem;
+    padding-bottom:0.3rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    background-color: #f1a224;
+    border-radius: 20%;
+}
+
+    #forImageUploader:hover {
+        background-color: #f66302;
+    }
+
+.btnH:hover {
+    background-color: #f66302;
+    
+}
+
+#labelImg {
+    margin-top: 1rem;
+}
+
+.Ingredientes {
+    background: #f5be77;
+    width: 100%;
+    border-radius: 7px;
+    text-align: center;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+}
+
+.inputsIngrediente {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 25rem;
+    border-radius: 10px;
+}
+
+.inputPaso {
+    width:60rem;
+    height:5rem;
+}
+
+.titulo {
+    padding-top: 1rem;
+}
+
+.Pasos {
+    text-align: center;
+    background: #f5be77;
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+}
+
+
+.padresubidaimagen {
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+}
+
+.imagensubida {
+    background: #f5be77;
+    width: 300px;
+    border-radius: 7px;
+    margin: 1.3rem;
+}
+
+
+.navBar {
+    
+}
+
+
+/*.Img_Div {                    PADRE
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 98.7%;
+    height: 82%;
+}
+
+.imageDiv {                     HIJO
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    width: 40%;
+    height: 100%;
+    border-right: 1px solid black;
+}
+
+#imagePreview, #imagePreview2 {             etiqueta img
+    max-width: 100%;
+    max-height: 100%;
+    padding-right: 30px;
+}*/
+
+/*Comentarios*/
+#comentarios {
+    margin-top: 2rem;
+    background: #f5be77;
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+}
+
+.comentarioTit {
+    text-align:center;
+}
+
+#enviarComentario {
+    border: 1px solid #ff7500;
+    margin: auto;
+    text-align: center;
+    background-color: #e3eff1;
+    width: 75rem;
+    border-radius: 12px;
+    font-family: 'Malgun Gothic';
+    text-align: left;
+    padding-left: 1rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+#inputComentario {
+    margin-top:1rem;
+    width:98%;
+    height:10rem;
+}
+
+#inputComentarioAbajo {
+    width: 98%;
+    background-color: #f8ddba;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#inputParteUsu {
+    display: block;
+}
+
+#inputCombtn {
+    margin-top:0.3rem;
+}
+
+.imgUsuComentario {
+
+    border:2px solid #7d7d7d;
+
+    width: 3rem;
+    height: 3rem;
+    max-width: 3rem;
+    max-width: 3rem;
+    border-radius:20%;
+}
+
+.iUC {
+    margin-top: 2rem;
+    width: 4rem;
+    height: 4rem;
+    max-width: 4rem;
+    max-width: 4rem;
+}
+
+.btnP {
+    margin-top: 0px;
+    margin-bottom: 1rem;
+}
+
+#n {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.comentario {
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f5be77;
+    display: flex;
+}
+
+#cargarComentarios {
+    border: 1px solid #ff7500;
+    margin: auto;
+    margin-bottom: 3rem;
+    background-color: #e3eff1;
+    width: 75rem;
+    border-radius: 12px;
+    font-family: 'Malgun Gothic';
+    text-align: left;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+}
+
+.contenidoComentario {
+    border-left: 1px solid #f1a224;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+
+
+/*******************PERFIL*************************/
+
+.titPerfil {
+    
+}
+
+.perfil-header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    border-bottom: 1px solid #ffb339;
+}
+
+#imgPreviewPerfil {
+    min-width: 20rem;
+    max-width: 30rem;
+
+    min-height:20rem;
+    max-height:30rem;
+
+    border:7px solid #acacac;
+    border-radius:7%;
+}
+
+
+#forImageUploaderPerfil {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #f1a224;
+    border-radius: 20%;
+}
+
+    #forImageUploaderPerfil:hover {
+        background-color: #f66302;
+    }
+
+#imageUploaderPerfil {
+    margin-bottom: 1rem;
+    display: none;
+    background-color: #ea8127;
+}
+
+#guardarImgPerfil {
+    margin-top:1.2rem;
+}
+
+#nombrePerfil {
+    
+}
+
+.contTit {
+    width: 40rem;
+    display: inline-block;
+
+    border-bottom: 1px solid #f1a224;
+}
+
+
+/*Contenido Del Perfil*/
+
+.contenido-perfil {
+    text-align:center;
+    padding-bottom:3rem;
+}
+
+.datos-perfil {
+    display: inline-block;
+    border: 1px solid #ff7500;
+    border-radius:2%;
+    width: 40rem;
+    padding-bottom: 1rem;
+}
+
+#labelPerfil {
+    display: inline-block;
+    background-color: white;
+    line-height: 45px;
+    width: 12.2rem;
+    height: 2.5rem;
+}
+
+#formPer {
+    padding-bottom: 2rem;
+    border-radius: 2%;
+    border: 1px solid #ffdfc5;
+}
+
+.iniciosesion {
+    border: 1px solid #ff7500;
+    border-radius: 10px;
+    width: 14rem;
+    height: 1.5rem;
+    padding-left: 1rem;
+    background: #ff7500;
+}
+
+.sesion {
+    border-radius: 20%;
+}
+
+.iniciologin {
+    padding-left: 22rem;
+    border-radius: 20%;
+    
+}
